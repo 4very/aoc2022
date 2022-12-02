@@ -41,7 +41,10 @@ console.log(dayMetaData)
             hover:translate-x-0.5 hover:-translate-y-0.5 drop-shadow
             active:-translate-x-0.5 active:translate-y-0.5" 
         >
-          <div class="grid grid-cols-2 grid-rows-2 w-full h-full">
+          <div
+            v-if="(day?.avaliable !== false)"
+            class="grid grid-cols-2 grid-rows-2 w-full h-full"
+          >
             <div class="text-2xl pl-1">
               {{ dayNumber + 1 }}
             </div>
@@ -53,6 +56,10 @@ console.log(dayMetaData)
               {{ day?.name ?? '--' }}
             </div>
           </div>
+          <div
+            v-else
+            class="bg-red-200 opacity-10"
+          />
         </a>
       </div>
     </div>
