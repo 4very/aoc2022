@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   content: ['./index.html', './src/**/*.vue', './src/**/*.ts'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+        mono: ['\"Source Code Pro\"', 'monospaced'],
       },
       colors: {
         aoc: {

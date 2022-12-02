@@ -1,40 +1,27 @@
 <script setup>
 
-const tempDummyData = {
-  1: {
-    completion: 2,
-    name: 'Calorie Counting',
-  },
-}
+import dayData from '/days/meta.js'
 
 const todaysDay = (new Date()).getDate()
-const dayMetaData = []
+const calendarData = []
 
 for(let numberIterator = 1; numberIterator <= 25; numberIterator++) {
   if (numberIterator > todaysDay) {
-    dayMetaData.push({
+    calendarData.push({
       avaliable: false,
     })
   } else {
-    dayMetaData.push(tempDummyData[numberIterator])
+    calendarData.push(dayData[numberIterator])
   }
 }
-
-console.log(dayMetaData)
-
 </script>
 
 <template>
   <div>
-    <div>
-      <h1 class="text-aoc-green text-4xl hover:text-aoc-lime">
-        [Advent of Code 2022]
-      </h1>
-    </div>
     <div class="mt-5">
       <div class="grid grid-cols-5 grid-rows-5 rounded-xl max-w-2xl gap-2">
         <a
-          v-for="(day, dayNumber) in dayMetaData"
+          v-for="(day, dayNumber) in calendarData"
           :key="dayNumber"
           :href="`day/${dayNumber + 1}`"
           class=" text-white border-opacity-50 min-w-fit p-2 aspect-square rounded bg-slate-800
@@ -53,7 +40,7 @@ console.log(dayMetaData)
               <span :class="{'text-aoc-yellow': day?.completion > 1}">*</span>
             </div>
             <div class="col-span-2 text-md whitespace-normal text-center">
-              {{ day?.name ?? '--' }}
+              {{ day?.dayTitle ?? '--' }}
             </div>
           </div>
           <div

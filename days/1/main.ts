@@ -1,4 +1,5 @@
-import { readSample } from '../helpers/io'
+import { readInput, split } from '../helpers/io'
 
+const input = readInput(__dirname)
 
-console.log(readSample())
+split(input, ['\n\n', '\n'])
