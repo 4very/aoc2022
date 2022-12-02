@@ -6,7 +6,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        aoc: {
+          bg: '#0f0f23',
+          lime: '#99ff99',
+          green: '#009900',
+          yellow: '#ffff66',
+          gray: '#666666',
+          darkgray: '#333333',
+        },
+      },
+      dropShadow: {
+        highlight: '0 0 5px #ffffff',
       },
     },
   },
