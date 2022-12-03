@@ -8,8 +8,8 @@ export default {
     'completion': 2,
   },
   3: {
-    'dayTitle': '',
-    'completion': 0,
+    'dayTitle': 'Rucksack Reorganization',
+    'completion': 2,
   },
   4: {
     'dayTitle': '',
