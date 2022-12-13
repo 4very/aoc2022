@@ -1,5 +1,16 @@
-import { readInput, split } from '../helpers/io'
+import _ from "lodash"
+import { split } from "../helpers/io"
 
-const input = readInput(__dirname)
+const parse = (input: string) => { return input}
 
-split(input, ['\n\n', '\n'])
+export function part1(rawinput: string) {
+  const input = parse(rawinput)
+
+  return 
+}
+
+export function part2(rawinput: string) {
+  const input = parse(rawinput)
+
+  return 
+}
